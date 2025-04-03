@@ -20,8 +20,9 @@ export default function Model() {
     }
   }, [actions]);
 
-  useFrame((state, delta) => {
+  useFrame(( _ , delta) => {
     if (group.current) {
+      
       // Move the model smoothly based on the mouse position
       const targetX = mouse.x * 2; // Horizontal movement based on mouse
       const targetY = hovered ? -1.5 + mouse.y * 1.5 : -2 + mouse.y * 1.5; // Vertical movement
